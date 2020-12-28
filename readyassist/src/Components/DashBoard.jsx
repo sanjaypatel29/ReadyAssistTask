@@ -34,7 +34,6 @@ export default function DashBoard(props) {
     //For add user data
     const handleAdd = () => {
         let payload = { userName, firstName, lastName }
-        console.log(userName, firstName, lastName)
         dispatch(addUser(payload))
     }
 
@@ -54,19 +53,19 @@ export default function DashBoard(props) {
                                         <form onSubmit={handleAdd}>
                                             <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
                                                 <span className="text-muted">UserName</span><br />
-                                                <input name="name" value={userName} onChange={(e) => setUserName(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="text" />
+                                                <input name="name" required value={userName} onChange={(e) => setUserName(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="text" />
                                             </div>
 
                                             <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
                                                 <span className="text-muted">First Name:</span><br />
-                                                <input name="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" />
+                                                <input name="firstName" required value={firstName} onChange={(e) => setFirstName(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" />
                                             </div>
 
                                             <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
                                                 <span className="text-muted">lastName</span><br />
-                                                <input name="profileImage" value={lastName} onChange={(e) => setLastName(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="text" />
+                                                <input name="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="text" />
                                             </div>
-                                            <button type="submit" className="mt-4 text-white bg-primary border border-primary rounded-pill font-weight-bold" style={{ height: "50px", outline: "none", width: "100%" }}>SignUp</button>
+                                            <button type="submit" className="mt-4 text-white bg-primary border border-primary rounded-pill font-weight-bold" style={{ height: "50px", outline: "none", width: "100%" }}>Add Data</button>
                                         </form>
                                     </div>
                                 </div>

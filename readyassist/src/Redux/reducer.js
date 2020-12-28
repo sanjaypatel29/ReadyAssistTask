@@ -3,9 +3,6 @@ import { ADD_USER_FAILURE, ADD_USER_REQUEST, ADD_USER_SUCCESS, EDIT_USER_FAILURE
 export const initialState = {
     err: "",
     data: [],
-    isEdit: false,
-    isDelete: false,
-    isAdd: false,
 }
 
 const reducer = (state = initialState, action) => {
@@ -18,7 +15,6 @@ const reducer = (state = initialState, action) => {
         case ADD_USER_SUCCESS:
             return {
                 ...state,
-                isAdd: true
             };
 
         case ADD_USER_FAILURE:
@@ -34,7 +30,6 @@ const reducer = (state = initialState, action) => {
         case EDIT_USER_SUCCESS:
             return {
                 ...state,
-                isEdit: true
             }
         case EDIT_USER_FAILURE:
             return {
@@ -48,7 +43,6 @@ const reducer = (state = initialState, action) => {
         case DELETE_USER_SUCCESS:
             return {
                 ...state,
-                isDelete: true
             }
         case DELETE_USER_FAILURE:
             return {
