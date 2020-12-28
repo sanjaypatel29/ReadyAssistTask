@@ -85,7 +85,7 @@ export default function DashBoard(props) {
                                 <div key={item._id} style={{ border: "4px solid grey" }}>
                                     <div className="row d-flex mx-auto p-3 text-white" style={{ backgroundColor: item.isActive ? "green" : "red" }}>
                                         <span className="flex-1 font-weight-bold ml-5">UserName:{item.userName}</span>
-                                        <span className="flex-1 font-weight-bold ml-5">Name:{item.firstName + item.lastName}</span>
+                                        <span className="flex-1 font-weight-bold ml-5">Name:{item.firstName + " " + item.lastName}</span>
                                         <div className="col">
                                             <Link to={`/edit/${item._id}`} data={item}>
                                                 <button variant="contained" color="dark">Edit</button>
